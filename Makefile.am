@@ -37,7 +37,7 @@ appdefaultdir = $(sysconfdir)/X11/app-defaults
 appdefault_DATA = Xvidtune
 
 Xvidtune: Xvidtune.cpp
-	$(CPP) $< | sed -e s/^\#.*$$//g > $@
+	$(RAWCPP) $(srcdir)/Xvidtune.cpp | sed -e s/^\#.*$$//g > $@
 
 EXTRA_DIST = Xvidtune.cpp
 

@@ -30,6 +30,9 @@ AM_CONFIG_HEADER(config.h)
 
 AC_PROG_CC
 AC_PROG_INSTALL
+AC_PROG_CPP
+AC_PATH_PROGS(RAWCPP, [cpp], [$(CPP)], 
+   [$PATH:/bin:/usr/bin:/usr/lib:/usr/libexec:/usr/ccs/lib:/usr/ccs/lbin:/lib])
 
 # Checks for pkg-config packages
 XAW_CHECK_XPRINT_SUPPORT(XAW)
