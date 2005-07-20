@@ -21,8 +21,8 @@
 
 bin_PROGRAMS = xvidtune
 
-xvidtune_CFLAGS = $(DEP_CFLAGS)
-xvidtune_LDADD = $(DEP_LIBS)
+xvidtune_CFLAGS = $(XVIDTUNE_CFLAGS)
+xvidtune_LDADD = $(XVIDTUNE_LIBS)
 
 xvidtune_SOURCES =	\
         xvidtune.c
