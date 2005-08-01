@@ -27,7 +27,7 @@ xvidtune_LDADD = $(XVIDTUNE_LIBS)
 xvidtune_SOURCES =	\
         xvidtune.c
 
-dist_man_MANS = \
+dist_man1_MANS = \
         xvidtune.man
 
 # App default files  (*.ad)
