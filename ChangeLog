@@ -1,0 +1,7 @@
+2005-10-13  Alan Coopersmith  <alan.coopersmith@sun.com>
+
+	* man/Makefile.am: 
+	* configure.ac:
+	Use sed to fill in variables in man page
+
+
