@@ -32,7 +32,7 @@ xvidtune_SOURCES =	\
 
 appmandir =  $(mandir)/man$(APP_MAN_SUFFIX)
 appman_SOURCES = xvidtune.man
-appman_DATA = $(appman_SOURCES:man=$(APP_MAN_SUFFIX))
+appman_DATA = $(appman_SOURCES:man=@APP_MAN_SUFFIX@)
 
 SED = sed
 
