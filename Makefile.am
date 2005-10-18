@@ -60,7 +60,7 @@ SUFFIXES = .$(APP_MAN_SUFFIX) .man
 
 # App default files  (*.ad)
 
-appdefaultdir = $(sysconfdir)/X11/app-defaults
+appdefaultdir = $(libdir)/X11/app-defaults
 
 appdefault_DATA = Xvidtune
 
