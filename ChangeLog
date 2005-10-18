@@ -1,3 +1,13 @@
+2005-10-18  Alan Coopersmith  <alan.coopersmith@sun.com>
+
+	* Makefile.am: 
+	Substitute __VENDOR__ with $(VENDORNAME) in disclaimer in XVidtune
+	app-defaults file
+
+	* configure.ac: 
+	Add --with-vendor-name option to set $(VENDORNAME).
+	Set default $(VENDORNAME) to "The X.Org Foundation".	
+
 2005-10-13  Alan Coopersmith  <alan.coopersmith@sun.com>
 
 	* man/Makefile.am: 

@@ -65,7 +65,8 @@ appdefaultdir = $(libdir)/X11/app-defaults
 appdefault_DATA = Xvidtune
 
 Xvidtune: Xvidtune.cpp
-	$(RAWCPP) $(srcdir)/Xvidtune.cpp | sed -e s/^\#.*$$//g > $@
+	$(RAWCPP) $(srcdir)/Xvidtune.cpp | \
+	sed -e 's/^\#.*$$//g' -e 's|__VENDOR__|$(VENDOR_NAME)|' > $@
 
 EXTRA_DIST = Xvidtune.cpp $(appman_SOURCES)
 

@@ -46,6 +46,13 @@ echo $XVIDTUNE_LIBS
 AC_SUBST(XVIDTUNE_CFLAGS)
 AC_SUBST(XVIDTUNE_LIBS)
 
+AC_ARG_WITH(vendor-name,
+	    AS_HELP_STRING([--with-vendor-name=VENDOR],
+			   [Vendor name for disclaimer statement]),
+	    [ VENDOR_NAME="$withval" ],
+	    [ VENDOR_NAME="The X.Org Foundation" ])
+AC_SUBST([VENDOR_NAME])
+
 XORG_MANPAGE_SECTIONS
 XORG_RELEASE_VERSION
 
