@@ -34,6 +34,8 @@ AC_PROG_CPP
 AC_PATH_PROGS(RAWCPP, [cpp], [$(CPP)], 
    [$PATH:/bin:/usr/bin:/usr/lib:/usr/libexec:/usr/ccs/lib:/usr/ccs/lbin:/lib])
 
+m4_ifdef([AS_HELP_STRING], , [m4_define([AS_HELP_STRING], m4_defn([AC_HELP_STRING]))])
+
 # Checks for pkg-config packages
 XAW_CHECK_XPRINT_SUPPORT(XAW)
 PKG_CHECK_MODULES(XVIDTUNE, xxf86vm)
