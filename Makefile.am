@@ -31,8 +31,8 @@ xvidtune_SOURCES =	\
 # Man page
 
 appmandir = $(APP_MAN_DIR)
-appman_SOURCES = xvidtune.man
-appman_DATA = $(appman_SOURCES:man=@APP_MAN_SUFFIX@)
+appman_PRE = xvidtune.man
+appman_DATA = $(appman_PRE:man=@APP_MAN_SUFFIX@)
 
 SED = sed
 
@@ -68,7 +68,7 @@ Xvidtune: Xvidtune.cpp
 	$(RAWCPP) $(srcdir)/Xvidtune.cpp | \
 	sed -e 's/^\#.*$$//g' -e 's|__VENDOR__|$(VENDOR_NAME)|' > $@
 
-EXTRA_DIST = Xvidtune.cpp $(appman_SOURCES)
+EXTRA_DIST = Xvidtune.cpp $(appman_PRE)
 
 CLEANFILES = Xvidtune $(appman_DATA)
 
