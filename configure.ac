@@ -55,6 +55,10 @@ AC_ARG_WITH(vendor-name,
 	    [ VENDOR_NAME="The X.Org Foundation" ])
 AC_SUBST([VENDOR_NAME])
 
+PKG_CHECK_MODULES(APPDEFS, xt)
+appdefaultdir=$(pkg-config --variable=appdefaultdir xt)
+AC_SUBST(appdefaultdir)
+
 XORG_MANPAGE_SECTIONS
 XORG_RELEASE_VERSION
 
