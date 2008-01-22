@@ -22,7 +22,7 @@
 
 bin_PROGRAMS = xvidtune
 
-xvidtune_CFLAGS = $(XVIDTUNE_CFLAGS)
+AM_CFLAGS = $(XVIDTUNE_CFLAGS)
 xvidtune_LDADD = $(XVIDTUNE_LIBS)
 
 xvidtune_SOURCES =	\
