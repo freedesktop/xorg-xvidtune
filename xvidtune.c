@@ -965,7 +965,7 @@ CreateTyp (
 
     wids[0] = XtCreateWidget (w1name, labelWidgetClass, form, NULL, 0);
     if (findex >= PixelClock && findex <= VSyncRate)
-	(void) sprintf(buf, "%6.2f", (float)AppRes.field[findex].val / 1000.0);
+	(void) snprintf(buf, 10, "%6.2f", (float)AppRes.field[findex].val / 1000.0);
     else
 	(void) sprintf (buf, "%5d", AppRes.field[findex].val);
     wids[1] = XtVaCreateWidget (w2name, labelWidgetClass,
