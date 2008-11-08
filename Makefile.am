@@ -62,13 +62,14 @@ SUFFIXES = .$(APP_MAN_SUFFIX) .man
 
 appdefaultdir = @appdefaultdir@
 
-appdefault_DATA = Xvidtune
+appdefault_DATA = app-defaults/Xvidtune
 
-Xvidtune: Xvidtune.cpp
-	$(RAWCPP) $(srcdir)/Xvidtune.cpp | \
+app-defaults/Xvidtune: app-defaults/Xvidtune.cpp
+	$(mkdir_p) app-defaults
+	$(RAWCPP) $(srcdir)/app-defaults/Xvidtune.cpp | \
 	sed -e 's/^\#.*$$//g' -e 's|__VENDOR__|$(VENDOR_NAME)|' > $@
 
-EXTRA_DIST = Xvidtune.cpp $(appman_PRE)
+EXTRA_DIST = app-defaults/Xvidtune.cpp $(appman_PRE)
 
 CLEANFILES = Xvidtune $(appman_DATA)
 
