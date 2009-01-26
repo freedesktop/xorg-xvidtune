@@ -49,11 +49,11 @@ from Kaleb S. KEITHLEY.
 #include <stdlib.h>
 #include <signal.h>
 
-int MajorVersion, MinorVersion;
-int EventBase, ErrorBase;
-int dot_clock, mode_flags;
-unsigned long    TestTimeout=5000;  /* Default test timeout */
-XtSignalId sigId;
+static int MajorVersion, MinorVersion;
+static int EventBase, ErrorBase;
+static int dot_clock, mode_flags;
+static unsigned long TestTimeout=5000;  /* Default test timeout */
+static XtSignalId sigId;
 
 /* Minimum extension version required */
 #define MINMAJOR 0

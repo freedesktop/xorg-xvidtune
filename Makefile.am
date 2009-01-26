@@ -58,18 +58,14 @@ SUFFIXES = .$(APP_MAN_SUFFIX) .man
 .man.$(APP_MAN_SUFFIX):
 	sed $(MAN_SUBSTS) < $< > $@
 
-# App default files  (*.ad)
+# App default files
+DISTCHECK_CONFIGURE_FLAGS = --with-appdefaultdir=\$${datadir}/X11/app-defaults
 
 appdefaultdir = @appdefaultdir@
 
-appdefault_DATA = app-defaults/Xvidtune
+dist_appdefault_DATA = app-defaults/Xvidtune
 
-app-defaults/Xvidtune: app-defaults/Xvidtune.cpp
-	$(mkdir_p) app-defaults
-	$(RAWCPP) $(srcdir)/app-defaults/Xvidtune.cpp | \
-	sed -e 's/^\#.*$$//g' -e 's|__VENDOR__|$(VENDOR_NAME)|' > $@
-
-EXTRA_DIST = app-defaults/Xvidtune.cpp $(appman_PRE)
+EXTRA_DIST = $(appman_PRE)
 
 CLEANFILES = Xvidtune $(appman_DATA)
 
@@ -80,6 +76,6 @@ MAINTAINERCLEANFILES = ChangeLog
 .PHONY: ChangeLog
 
 ChangeLog:
-	(GIT_DIR=$(top_srcdir)/.git git-log > .changelog.tmp && mv .changelog.tmp ChangeLog; rm -f .changelog.tmp) || (touch ChangeLog; echo 'git directory not found: installing possibly empty changelog.' >&2)
+	$(CHANGELOG_CMD)
 
 dist-hook: ChangeLog

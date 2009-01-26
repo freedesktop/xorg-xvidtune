@@ -19,3 +19,7 @@ stamp-h1
 xvidtune
 xvidtune.1
 *~
+*.o
+xvidtune-*.tar.*
+ChangeLog
+tags
