@@ -70,8 +70,6 @@ EXTRA_DIST = $(appman_PRE)
 CLEANFILES = Xvidtune $(appman_DATA)
 
 
-EXTRA_DIST += ChangeLog
-MAINTAINERCLEANFILES = ChangeLog
 
 .PHONY: ChangeLog
 
