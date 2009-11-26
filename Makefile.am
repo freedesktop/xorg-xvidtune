@@ -67,6 +67,7 @@ dist_appdefault_DATA = app-defaults/Xvidtune
 
 EXTRA_DIST = $(appman_PRE)
 
+MAINTAINERCLEANFILES = ChangeLog INSTALL
 CLEANFILES = Xvidtune $(appman_DATA)
 
 
