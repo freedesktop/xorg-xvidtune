@@ -1631,7 +1631,7 @@ main (int argc, char** argv)
 	<Btn1Down>: select-start()\n");
 
     if (!ModeSettable()) {
-	printf("Video are not settable on this chip\n");
+	printf("Video modes are not settable on this chip\n");
 	displayNoTune(top);
 	modeSettable = FALSE;
     } else
