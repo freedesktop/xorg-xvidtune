@@ -41,7 +41,6 @@ AC_ARG_WITH(appdefaultdir,
 	AC_HELP_STRING([--with-appdefaultdir=<pathname>],
 	  [specify directory for app-defaults files (default is autodetected)]),
 	[appdefaultdir="$withval"], [appdefaultdir="${xt_appdefaultdir}"])
-AC_SUBST(XVIDTUNE_CFLAGS)
 AC_SUBST(XVIDTUNE_LIBS)
 AC_SUBST(appdefaultdir)
 
