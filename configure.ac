@@ -33,7 +33,6 @@ XORG_MACROS_VERSION(1.8)
 XORG_DEFAULT_OPTIONS
 AM_CONFIG_HEADER(config.h)
 
-AC_PROG_CC
 
 # Checks for pkg-config packages
 PKG_CHECK_MODULES(XVIDTUNE, xxf86vm xt xaw7 xmu x11)
