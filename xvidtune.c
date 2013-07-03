@@ -1479,13 +1479,13 @@ PrevModeAction(Widget w, XEvent* e, String* vector, Cardinal* count)
 static void
 usage(void)
 {
-    fprintf(stderr, "Usage: %s [option]\n", progname);
+    fprintf(stderr, "Usage: %s [-show|-prev|-next|-unlock|-timeout <sec>] [-toolkitoption...]\n", progname);
     fprintf(stderr, "    where option is one of:\n");
     fprintf(stderr, "        -show                             Print current modeline to stdout\n");
     fprintf(stderr, "        -next                             Switch to next video mode\n");
     fprintf(stderr, "        -prev                             Switch to previous video mode\n");
     fprintf(stderr, "        -unlock                           Enable mode switch hot-keys\n");
-    fprintf(stderr, "        -timeout [seconds]                Set testmode timeout in seconds,\n");
+    fprintf(stderr, "        -timeout <sec>                    Set testmode timeout in seconds\n");
     exit(1);
 }
 
