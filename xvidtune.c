@@ -55,6 +55,8 @@ static int dot_clock, mode_flags;
 static unsigned long TestTimeout=5000;  /* Default test timeout */
 static XtSignalId sigId;
 
+static char *progname;
+
 /* Minimum extension version required */
 #define MINMAJOR 0
 #define MINMINOR 5
@@ -1477,7 +1479,7 @@ PrevModeAction(Widget w, XEvent* e, String* vector, Cardinal* count)
 static void
 usage(void)
 {
-    fprintf(stderr, "Usage: xvidtune [option]\n");
+    fprintf(stderr, "Usage: %s [option]\n", progname);
     fprintf(stderr, "    where option is one of:\n");
     fprintf(stderr, "        -show                             Print current modeline to stdout\n");
     fprintf(stderr, "        -next                             Switch to next video mode\n");
@@ -1495,6 +1497,8 @@ main (int argc, char** argv)
     XtAppContext app;
     Display* dpy;
     Bool modeSettable = TRUE;
+
+    progname = argv[0];
     
     static XtActionsRec actions[] = { { "xvidtune-quit", QuitAction },
 				      { "xvidtune-restore", RestoreAction },
